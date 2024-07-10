@@ -73,7 +73,11 @@ nx serve
 
 Visit `http://localhost:4200` in your browser to see the dashboard in action.
 
+### Step 4: Run Tests
 
+```bash
+nx test
+```
 
 ## 1. Setting Up the Express Server
 
