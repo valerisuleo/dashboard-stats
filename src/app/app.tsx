@@ -1,12 +1,9 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
-
-import NxWelcome from './nx-welcome';
+import DashboardPage from './pages/dashboard/dashboardPage';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="dashboard-stats" />
+      <DashboardPage></DashboardPage>
     </div>
   );
 }
