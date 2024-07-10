@@ -17,7 +17,7 @@ import CustomTooltip from './components/tooltip/customTooltip';
 
 function DashboardPage() {
     const initialValue1 = 5;
-    const initialValue2 = 11;
+    const initialValue2 = 30;
     const { stats, outs, getGameLogs, updateState } = useGameLogs(
         initialValue1,
         initialValue2
@@ -41,6 +41,9 @@ function DashboardPage() {
             fill: '#ad9163',
             radius: [50, 50, 0, 0],
         },
+        CustomTick,
+        CustomYAxisTick,
+        CustomTooltip,
     };
 
     useEffect(() => {
@@ -157,14 +160,7 @@ function DashboardPage() {
                         </div>
                         <div className="card-body">
                             <div className={styles.chart}>
-                                <SimpleBarChart
-                                    data={props.data}
-                                    style={props.style}
-                                    barStyle={props.barStyle}
-                                    CustomTooltip={CustomTooltip}
-                                    CustomYAxisTick={CustomYAxisTick}
-                                    CustomTick={CustomTick}
-                                />
+                                <SimpleBarChart {...props} />
                             </div>
                         </div>
                     </div>
