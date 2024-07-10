@@ -11,6 +11,9 @@ import useGameLogs from './hooks/useGameLogs';
 import styles from './dashboardPage.module.scss';
 import useScreenDetect from '../../common/hooks/useScreen';
 import SimpleBarChart from '../../common/library/charts/simple-bar-chart/simpleBarChart';
+import CustomTick from './components/customTick';
+import CustomYAxisTick from './components/customYAxisTick';
+import CustomTooltip from './components/tooltip/customTooltip';
 
 function DashboardPage() {
     const initialValue1 = 5;
@@ -89,8 +92,6 @@ function DashboardPage() {
         setChartData(result);
     };
 
-
-
     return (
         <main
             className={`container-fluid ${
@@ -160,6 +161,9 @@ function DashboardPage() {
                                     data={props.data}
                                     style={props.style}
                                     barStyle={props.barStyle}
+                                    CustomTooltip={CustomTooltip}
+                                    CustomYAxisTick={CustomYAxisTick}
+                                    CustomTick={CustomTick}
                                 />
                             </div>
                         </div>
