@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { IOuts, IPlayerStats } from '../interfaces';
 import axios from 'axios';
+import { environment } from '../../../../environments/environment';
 
 const useGameLogs = (initialValue1: number, initialValue2: number) => {
     const [stats, setStats] = useState<IPlayerStats[]>([]);
@@ -13,9 +14,12 @@ const useGameLogs = (initialValue1: number, initialValue2: number) => {
 
     async function getGameLogs(min: number, max: number) {
         try {
-            const { data } = await axios.get('http://localhost:3000/gamelogs', {
-                params: { min, max },
-            });
+            const { data } = await axios.get(
+                `${environment.config.api.express.baseUrl}/gamelogs`,
+                {
+                    params: { min, max },
+                }
+            );
 
             console.log(data.gamelogs);
             setStats(data.gamelogs);
