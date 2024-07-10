@@ -1,0 +1,60 @@
+.progress {
+    position: relative;
+    margin: 4px;
+    float: left;
+    text-align: center;
+    
+
+    .values {
+        color: white;
+        h1 {
+            font-size: 5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+    }
+    @media only screen and (max-width: 960px) {
+        .values {
+            h1 {
+                font-size: 1rem; /* Adjust as necessary */
+            }
+
+            p {
+                font-size: 1rem; /* Adjust as necessary */
+                margin-top: 1rem; /* Adjust as necessary */
+            }
+        }
+    }
+}
+
+.bar-overflow {
+    /* Wraps the rotating .bar */
+    position: relative;
+    overflow: hidden; /* Comment this line to understand the trick */
+    width: 90px;
+    height: 45px; /* Half circle (overflow) */
+    margin-bottom: -10rem; /* bring the numbers up */
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 960px) {
+    .bar-overflow {
+        margin-bottom: -2rem; /* Adjust as necessary for mobile */
+    }
+}
+
+
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px; /* full circle! */
+    border-radius: 50%;
+    border: 32px solid silver;
+    border-bottom-color: #ad9163; /* half azure */
+    border-right-color: #ad9163;
+}
