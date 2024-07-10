@@ -1,5 +1,16 @@
-import { BarChart, Bar, ResponsiveContainer, CartesianGrid } from 'recharts';
+import {
+    BarChart,
+    Bar,
+    ResponsiveContainer,
+    XAxis,
+    CartesianGrid,
+    YAxis,
+    Tooltip,
+} from 'recharts';
 import { ISimpleBarChart } from './interfaces';
+import CustomTooltip from '../../../../pages/dashboard/components/tooltip/customTooltip';
+import CustomYAxisTick from '../../../../pages/dashboard/components/customYAxisTick';
+import CustomTick from '../../../../pages/dashboard/components/customTick';
 
 function SimpleBarChart(props: ISimpleBarChart) {
     const { style, barStyle, data } = props;
@@ -12,6 +23,9 @@ function SimpleBarChart(props: ISimpleBarChart) {
                 data={data}
                 margin={style?.margin}
             >
+                <XAxis dataKey="x" tick={<CustomTick />} />
+                <YAxis tick={<CustomYAxisTick />} />
+                <Tooltip content={<CustomTooltip />} />
                 <CartesianGrid strokeDasharray="3 3" />
                 <Bar
                     dataKey="y"
