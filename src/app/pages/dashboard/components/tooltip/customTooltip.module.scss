@@ -1,0 +1,15 @@
+.tooltip {
+    width: auto;
+    height: auto;
+    background-color: rgba(128, 128, 128, 0.7) !important;
+    padding: 1.5rem;
+    border-radius: 4px;
+    position: relative;
+    text-align: center;
+
+    p {
+        color: white !important;
+        margin: 0;
+        font-size: 1rem;
+    }
+}

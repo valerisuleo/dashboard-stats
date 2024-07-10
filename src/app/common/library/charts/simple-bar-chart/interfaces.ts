@@ -1,14 +1,17 @@
-
 export interface ISimpleBarChart {
     data: IBarChartItem[];
     style: IStyle;
     barStyle: IBarStyle;
+    CustomTooltip?: React.ElementType;
+    CustomYAxisTick?: React.ElementType;
+    CustomTick?: React.ElementType;
 }
 
 export interface IBarChartItem {
     x: string;
     y: number;
 }
+
 interface IStyle {
     width: number;
     height: number;

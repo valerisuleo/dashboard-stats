@@ -1,7 +1,22 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.widget {
+    background-color: #2b324c;
+    color: white;
+    height: 100%;
+    width: 100%;
+
+    h5 {
+        color: grey;
+
+        &:first-child {
+            color: white;
+        }
+    }
+}
+
+.chart {
+    height: 100%;
+
+    @media only screen and (max-width: 960px) {
+        min-height: 350px;
+    }
+}
