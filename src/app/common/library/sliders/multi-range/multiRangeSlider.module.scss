@@ -1,0 +1,145 @@
+.slider {
+    position: relative;
+    height: 14px;
+    border-radius: 10px;
+    text-align: left;
+    margin: 45px 0 10px 0;
+
+    > div {
+        position: absolute;
+        left: 13px;
+        right: 15px;
+        height: 14px;
+
+        > .inverseLeft {
+            position: absolute;
+            left: 0;
+            height: 10px;
+            border-radius: 10px;
+            background-color: #ccc;
+            margin: 0 7px;
+        }
+
+        > .inverseRight {
+            position: absolute;
+            right: 0;
+            height: 10px;
+            border-radius: 10px;
+            background-color: #ccc;
+            margin: 0 7px;
+        }
+
+        > .range {
+            position: absolute;
+            left: 0;
+            height: 10px;
+            border-radius: 14px;
+            background-color: #ad9163;
+        }
+
+        > .thumb {
+            position: absolute;
+            top: -10px;
+            z-index: 2;
+            height: 28px;
+            width: 28px;
+            text-align: left;
+            margin-left: -11px;
+            background-color: #ad9163;
+            border-radius: 50%;
+            border: 2px solid white;
+            outline: none;
+        }
+    }
+
+    > input[type='range'] {
+        position: absolute;
+        pointer-events: none;
+        z-index: 3;
+        height: 14px;
+        top: -2px;
+        width: 100%;
+        opacity: 0;
+
+        &::-ms-track {
+            background: transparent;
+            color: transparent;
+        }
+
+        &::-moz-range-track {
+            -moz-appearance: none;
+            background: transparent;
+            color: transparent;
+        }
+
+        &:focus::-webkit-slider-runnable-track {
+            background: transparent;
+            border: transparent;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &::-ms-thumb {
+            pointer-events: all;
+            width: 28px;
+            height: 28px;
+            border-radius: 0px;
+            border: 0 none;
+        }
+
+        &::-moz-range-thumb {
+            pointer-events: all;
+            width: 28px;
+            height: 28px;
+            border-radius: 0px;
+            border: 0 none;
+        }
+
+        &::-webkit-slider-thumb {
+            pointer-events: all;
+            width: 28px;
+            height: 28px;
+            border-radius: 0px;
+            border: 0 none;
+        }
+
+        &::-ms-fill-lower {
+            background: transparent;
+            border: 0 none;
+        }
+
+        &::-ms-fill-upper {
+            background: transparent;
+            border: 0 none;
+        }
+
+        &::-ms-tooltip {
+            display: none;
+        }
+    }
+}
+
+.container {
+    // background-color: red;
+    width: 100%;
+    height: 100px;
+
+    .box {
+        width: 80%;
+        height: 100%;
+        // background-color: lightblue;
+
+        float: left;
+
+        &:nth-of-type(1),
+        &:nth-of-type(3) {
+            // background-color: yellow;
+            width: 10%;
+            line-height: 100px;
+            text-align: center;
+            color: white;
+        }
+    }
+}
