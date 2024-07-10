@@ -108,8 +108,6 @@ I built several custom React components for the dashboard, using `recharts` for 
    - This component displays game data in a bar chart format using `recharts`.
    - The customization includes custom ticks, tooltips, and Y-axis ticks.
 
-Certainly! Here is the detailed walkthrough for the "Building the Dashboard" section:
-
 ## 3. Building the Dashboard
 
 I integrated the custom components into a `DashboardPage` to create the complete dashboard.
