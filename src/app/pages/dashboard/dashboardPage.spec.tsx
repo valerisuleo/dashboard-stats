@@ -25,6 +25,4 @@ describe('DashboardPage Component', () => {
     it('should create', () => {
         expect(component).toBeTruthy();
     });
-
-
 });
